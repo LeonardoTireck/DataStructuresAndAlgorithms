@@ -4,7 +4,7 @@ function numberOfSteps(num: number): number {
     if (num & 1) {
       num -= 1;
     } else {
-      num /= 2;
+      num >>= 1;
     }
     steps++;
   }
