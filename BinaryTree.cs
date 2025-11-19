@@ -5,7 +5,7 @@ tree.Insert(7);
 tree.Insert(1);
 tree.Insert(8);
 
-tree.InOrderTransversal();
+tree.InOrderTraversal();
 
 public class Node
 {
@@ -35,20 +35,20 @@ public class BinaryTree
         }
     }
 
-    public void InOrderTransversal()
+    public void InOrderTraversal()
     {
-        InOrderTransversalRecursive(Root);
+        InOrderTraversalRecursive(Root);
         Console.WriteLine();
     }
 
-    private void InOrderTransversalRecursive(Node? node)
+    private void InOrderTraversalRecursive(Node? node)
     {
         if (node == null)
             return;
 
-        InOrderTransversalRecursive(node.left);
+        InOrderTraversalRecursive(node.left);
         Console.WriteLine(node.Data);
-        InOrderTransversalRecursive(node.right);
+        InOrderTraversalRecursive(node.right);
     }
 
     public void InsertRecursive(int data, Node node)
