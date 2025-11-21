@@ -14,24 +14,15 @@ public class TreeNode
 
 public class Solution
 {
+    private List<int> sln = [];
+
     public IList<int> InorderTraversal(TreeNode root)
     {
-        List<int> sln = [];
         if (root == null)
             return sln;
-        InOrderRecursive(root);
-
+        InorderTraversal(root.left);
+        sln.Add(root.val);
+        InorderTraversal(root.right);
         return sln;
-
-        void InOrderRecursive(TreeNode node)
-        {
-            if (node == null)
-            {
-                return;
-            }
-            InOrderRecursive(root.left);
-            sln.Add(root.val);
-            InOrderRecursive(root.right);
-        }
     }
 }
